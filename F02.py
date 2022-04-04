@@ -2,10 +2,9 @@
 # new_user_idx :  integer
 # new_user_name : string
 # new_user_username : string 
-# password : string
 # new_user_password : string
-# new_user_alamat : string
 # new_user_role : string
+# saldo : integer
 # new_user : array
 
 def register(datas1,header1,dir):
@@ -16,13 +15,16 @@ def register(datas1,header1,dir):
 
   new_user_name = input("Masukan nama: ")
   new_user_username = input("Masukan username: ")
+  new_user_password = input("Masukkan password: ")
   count = 0
   for i in range datas1:
     count += 1
-  # VALIDASI TIDAK DAPAT MEMBUAT AKUN ADMIN
+  # VALIDASI TIDAK DAPAT MEMBUAT AKUN ADMIN DAN USERNAME YANG SAMA
   if new_user_username == "admin":
     print("Tidak bisa membuat admin, coba username lain.")
     exit()
+  elif new_user_username in new_users:
+    print("Username", new_user_username, "sudah terpakai, silakan menggunakan username lain.")
   while isUnik == False: # membaca keunikan username
     for i in range(count(datas1)):
       if (datas1[i][2] != new_user_username) or new_user_username == " " or new_user_username.isspace():
@@ -31,14 +33,12 @@ def register(datas1,header1,dir):
         isUnik = False
         new_user_username = input("Username harus unik, masukan username lain: ")
 
-  password = input("Masukkan password: ")
-  new_user_password = hashing(password) # melakukan hashing password yang telah diinput
-  new_user_alamat = input("Masukan alamat: ")
   print("")
   # PENAMBAHAN USER KE DALAM DATA
   new_user_role = "user"
-  new_user = [new_user_idx, new_user_name, new_user_username, new_user_password, new_user_alamat, new_user_role]
-  new_users = [new_users] + [new_user]
+  saldo = 0
+  new_user = [new_user_idx, new_user_username, new_user_name, new_user_password, new_user_role, saldo]
+  new_users = new_users + new_user
 
   datas1 += new_users
 
