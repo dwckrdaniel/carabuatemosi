@@ -16,12 +16,15 @@ def register(datas1,header1,dir):
 
   new_user_name = input("Masukan nama: ")
   new_user_username = input("Masukan username: ")
+  count = 0
+  for i in range datas1:
+    count += 1
   # VALIDASI TIDAK DAPAT MEMBUAT AKUN ADMIN
   if new_user_username == "admin":
     print("Tidak bisa membuat admin, coba username lain.")
     exit()
   while isUnik == False: # membaca keunikan username
-    for i in range(len(datas1)):
+    for i in range(count(datas1)):
       if (datas1[i][2] != new_user_username) or new_user_username == " " or new_user_username.isspace():
         isUnik = True
       else:
@@ -35,11 +38,11 @@ def register(datas1,header1,dir):
   # PENAMBAHAN USER KE DALAM DATA
   new_user_role = "user"
   new_user = [new_user_idx, new_user_name, new_user_username, new_user_password, new_user_alamat, new_user_role]
-  new_users.append(new_user)
+  new_users = [new_users] + [new_user]
 
   datas1 += new_users
 
-  print("User", new_user_username, "telah berhasil register ke dalam Kantong Ajaib")
+  print("Username", new_user_username, "telah berhasil register ke dalam Binomo")
 
   def convert_datas_to_string(header,datas):
     string_data = ";".join(header) + "\n"
