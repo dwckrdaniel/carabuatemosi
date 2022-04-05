@@ -25,6 +25,7 @@ def register(datas1,header1,dir):
     exit()
   elif new_user_username in new_users:
     print("Username", new_user_username, "sudah terpakai, silakan menggunakan username lain.")
+    exit()
   while isUnik == False: # membaca keunikan username
     for i in range(count(datas1)):
       if (datas1[i][2] != new_user_username) or new_user_username == " " or new_user_username.isspace():
