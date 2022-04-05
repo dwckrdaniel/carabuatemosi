@@ -37,7 +37,7 @@ def register(datas1,header1,dir):
   # PENAMBAHAN USER KE DALAM DATA
   new_user_role = "user"
   saldo = 0
-  new_user = [new_user_idx, new_user_username, new_user_name, new_user_password, new_user_role, saldo]
+  new_user = [new_user_idx, new_user_name, new_user_username, new_user_password, new_user_role, saldo]
   new_users = new_users + new_user
 
   datas1 += new_users
