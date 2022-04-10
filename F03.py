@@ -33,7 +33,7 @@ def login(datas1): # F02-Login
         if valid == False:
             print("Password atau username salah atau tidak ditemukan.")
         else:
-            print("Halo ",input_username,"! Selamat datang di Kantong Ajaib.")
+            print("Halo ",input_username,"! Selamat datang di Binomo")
         return [adminORuser,valid]
 
     loginverif = login_verif(username, password, input_username, input_password, valid)
