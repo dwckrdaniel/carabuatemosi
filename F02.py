@@ -8,6 +8,11 @@
 # new_user : array
 
 def register(datas1,header1,dir):
+  # INISIALISASI KEUNIKAN USERNAME
+  Alphabeth_uppercase = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"]
+  Alphabeth_undercase = ["a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z"]
+  numerical = ["0","1","2","3","4","5","6","7","8","9"]
+  symbol = ["-","_"]
   # INISIALISASI NEW USER
   new_users = []
   isUnik = False
@@ -23,12 +28,12 @@ def register(datas1,header1,dir):
   if new_user_username == "admin":
     print("Tidak bisa membuat admin, coba username lain.")
     exit()
-  elif new_user_username in new_users:
+  elif datas1[i][2] == new_user_username:
     print("Username", new_user_username, "sudah terpakai, silakan menggunakan username lain.")
     exit()
   while isUnik == False: # membaca keunikan username
     for i in range(count(datas1)):
-      if (datas1[i][2] != new_user_username) or new_user_username == " " or new_user_username.isspace():
+      if (datas1[i][2] != new_user_username) or new_user_username == Alphabet_uppercase or new_user_username == Alphabeth_undercase or new_user_username == numerical or new_user_username == symbol :
         isUnik = True
       else:
         isUnik = False
@@ -43,7 +48,7 @@ def register(datas1,header1,dir):
 
   datas1 += new_users
 
-  print("Username", new_user_username, "telah berhasil register ke dalam Binomo")
+  print("Username", new_user_username, 'telah berhasil register ke dalam "Binomo"')
 
   def convert_datas_to_string(header,datas):
     string_data = ";".join(header) + "\n"
