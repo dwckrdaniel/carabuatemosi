@@ -24,7 +24,7 @@ def login(datas1): # F02-Login
     # VERIFIKASI LOGIN TERHADAP DATA
     def login_verif(username, password, input_username, input_password, valid):
         for i in range(count(datas1)):
-            adminORuser = datas[i][5]
+            adminORuser = datas[i][4]
             if (datas[i][username] == input_username) and (datas[i][password] == input_password):
                 valid = True
                 break
