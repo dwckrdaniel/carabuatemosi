@@ -1,2 +1,1 @@
-id;nama;username;password;role;saldo
-1;CEO;admin;1029384756;admin;1000000
+id;nama;kategori;stok;harga;tahun_rilis
