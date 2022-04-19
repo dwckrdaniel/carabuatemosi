@@ -13,17 +13,19 @@ def login(datas1): # F02-Login
     username = 2
     password = 3
     valid = False
-    
-    count = 0 
-    for i in range datas1:
-      count += 1
+    def findLength(string):
+        count = 0
+        for i in string:
+            count+= 1
+  
+        return count
 
-    for i in range(count(datas1)):
+    for i in range(findLenght(datas1)):
         id_user = datas[i][0]
 
     # VERIFIKASI LOGIN TERHADAP DATA
     def login_verif(username, password, input_username, input_password, valid):
-        for i in range(count(datas1)):
+        for i in range(findLenght(datas1)):
             adminORuser = datas[i][4]
             if (datas[i][username] == input_username) and (datas[i][password] == input_password):
                 valid = True
