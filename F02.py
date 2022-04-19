@@ -36,8 +36,8 @@ def register(datas1,header1,dir):
     print("Username", new_user_username, "sudah terpakai, silakan menggunakan username lain.")
     exit()
   while isUnik == False: # membaca keunikan username
-    for i in range(findlenght(datas1)):
-      if (datas1[i][2] != new_user_username) or new_user_username == Alphabet_uppercase or new_user_username == Alphabeth_undercase or new_user_username == numerical or new_user_username == symbol :
+    for i in range(findLength(datas1)):
+      if (datas1[i][2] != new_user_username) or new_user_username == Alphabeth_uppercase or new_user_username == Alphabeth_undercase or new_user_username == numerical or new_user_username == symbol :
         isUnik = True
       else:
         isUnik = False
