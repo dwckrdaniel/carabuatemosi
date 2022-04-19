@@ -1,6 +1,6 @@
 import os
 
-def save(dir,datas,header,file): # F15 - Save Data
+def save(dir,datas,header,file): # F16 - Save Data
     # CONVERT SEMUA DATA KEMBALI MENJADI STRING
     def convert_datas_to_string(header, datas):
         string_data = ";".join(header) + "\n"
