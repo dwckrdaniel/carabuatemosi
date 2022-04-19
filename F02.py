@@ -21,9 +21,13 @@ def register(datas1,header1,dir):
   new_user_name = input("Masukan nama: ")
   new_user_username = input("Masukan username: ")
   new_user_password = input("Masukkan password: ")
-  count = 0
-  for i in range datas1:
-    count += 1
+  
+  def findLength(string):
+      count = 0
+      for i in string:
+          count+= 1
+
+      return count
   # VALIDASI TIDAK DAPAT MEMBUAT AKUN ADMIN DAN USERNAME YANG SAMA
   if new_user_username == "admin":
     print("Tidak bisa membuat admin, coba username lain.")
@@ -32,7 +36,7 @@ def register(datas1,header1,dir):
     print("Username", new_user_username, "sudah terpakai, silakan menggunakan username lain.")
     exit()
   while isUnik == False: # membaca keunikan username
-    for i in range(count(datas1)):
+    for i in range(findlenght(datas1)):
       if (datas1[i][2] != new_user_username) or new_user_username == Alphabet_uppercase or new_user_username == Alphabeth_undercase or new_user_username == numerical or new_user_username == symbol :
         isUnik = True
       else:
