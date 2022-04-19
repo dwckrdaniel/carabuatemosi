@@ -1,7 +1,7 @@
 # KAMUS
 # adminORuser : string
 
-def help(adminORuser): # F16 - Help
+def help(adminORuser): # F14 - Help
     if adminORuser == "admin":
         print('''
         ============HELP============
