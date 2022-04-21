@@ -212,7 +212,7 @@ def load4(dir):
 
   datas4 = []
 
-  for line in lines6:
+  for line in lines4:
     array_of_data = convert_line_to_data(line)
     real_values4 = convert_array_data_to_real_values4(array_of_data)
     datas4= [real_values4]+datas4
