@@ -9,7 +9,7 @@
 def login(datas1): # F02-Login
     datas = datas1
     input_username = str(input("Masukan username: "))
-    password = str(input("Masukan password: "))
+    input_password = str(input("Masukan password: "))
     username = 2
     password = 3
     valid = False
