@@ -19,7 +19,7 @@ def help(adminORuser): # F14 - Help
         ''')
     else:
         print('''
-        ---HELP---
+        ============HELP============
         login - untuk melakukan login ke dalam sistem
         list_game_toko - Untuk melihat list game yang dijual pada toko
         buy_game - membeli game yang terdapat di toko
