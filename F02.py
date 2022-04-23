@@ -8,9 +8,6 @@
 # new_user : array
 
 def register(datas1,header1,dir):
-  # INISIALISASI KEUNIKAN USERNAME
-  numerical = ["0","1","2","3","4","5","6","7","8","9"]
-  symbol = ["-","_"]
   # INISIALISASI NEW USER
   new_users = []
   isUnik = False
@@ -24,19 +21,18 @@ def register(datas1,header1,dir):
       count = 0
       for i in string:
           count+= 1
-
+          
       return count
   # VALIDASI TIDAK DAPAT MEMBUAT AKUN ADMIN DAN USERNAME YANG SAMA
   if new_user_username == "admin":
     print("Tidak bisa membuat admin, coba username lain.")
     exit()
-  elif datas1[i][2] == new_user_username:
-    print("Username", new_user_username, "sudah terpakai, silakan menggunakan username lain.")
-    exit()
   while isUnik == False: # membaca keunikan username
     for i in range(findLength(datas1)):
-      if (datas1[i][2] != new_user_username) or (new_user_username.lower()) or (new_user_username.upper()) or (new_user_username in numerical) or (new_user_username in symbol) :
+      if (datas1[i][2] != new_user_username) or new_user_username.lower() or new_user_username.upper():
         isUnik = True
+      elif new_user_username in datas1[i][2]:
+        print("Username",new_user_username,"sudah terpakai, silahkan menggunakan username lain")
       else:
         isUnik = False
         new_user_username = input("Username harus unik, masukan username lain: ")
